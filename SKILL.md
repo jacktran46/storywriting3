@@ -52,6 +52,7 @@ Platform: **Nano Banana 2** (Google image generation)
 | `references/concepts2.md` | 240 seeds in 12 groups |
 | `references/concepts3.md` | 600 seeds in 50 new setting groups |
 | `references/concepts4.md` | 930 seeds in 31 narrative engines (beyond humiliation→reveal) |
+| `references/story-engines.md` | Master engine registry (E00 + E01–E31): tone, photo rule, Turn→Payoff |
 | `references/caption-methodology.md` | Before any caption |
 | `references/full-story-methodology.md` | Before any full story |
 
@@ -66,13 +67,15 @@ Platform: **Nano Banana 2** (Google image generation)
 
 ## Narrative engines
 
-The pipeline's **default engine is *humiliation → reveal***. `concepts4.md` adds **31 engines** (kindness, crisis hero, reunion, debt of gratitude, sacrifice, forgiveness, bittersweet, etc.) so a batch isn't one-note.
+The pipeline's **default engine is *humiliation → reveal*** (labeled **E00** in `references/story-engines.md`). `concepts4.md` adds **31 engines** (kindness, crisis hero, reunion, debt of gratitude, sacrifice, forgiveness, bittersweet, etc.) so a batch isn't one-note. The master registry (`story-engines.md`) is the source of truth for each engine's **tone** and **photo rule**.
 
 - **Pick an engine per item** in Phase 0 and record it (`engine` field). Rotate engines across a batch — avoid 2+ consecutive items on the same engine.
+- **Engine labels concepts1/2/3 too:** those banks supply settings/recognition mechanics; their default engine is **E00**. Mix any setting with any engine: `setting (concepts1/2/3) × engine (story-engines)`.
 - **Not every engine has an antagonist.** When there's none, the Turn is an action / recognition / choice / return, and the Payoff is the emotional resolution — **not** a forced comeuppance. The methodology files carry the engine-aware branches.
 - **Twist stays out of the photo** for all engines, with **one exception**: four **action-in-photo** engines may show the peak action itself (the *outcome* still stays hidden):
   - Crisis Hero (E05), The Honest Return (E07), Good Deed Witnessed (E19), Underdog Wins on Merit (E22).
 - **Tone:** engines are tagged `feel-good`, `bittersweet`, or `mixed` — vary tone across a batch too.
+- **Mixed-bank batches:** use `scripts/pick-batch.js` to apply controlled-random rules (≤ max engines, no consecutive duplicate, balanced tone) and print an engine-map + JSON skeleton. See `batch-mode.md` → **Mixed-bank batch**.
 
 ---
 
@@ -95,6 +98,8 @@ Phase 4 — Export TXT        → package.txt from JSON (format only)
 ## Phase 0 — Story Plan
 
 Before any creative writing, plan every item:
+
+> **Mixed-bank tip:** run `node scripts/pick-batch.js --count N --prefix P --batch <id> [--write]` to auto-generate the engine-map + JSON skeleton (controlled-random: ≤ max engines, no consecutive duplicate, balanced tone). Then fill arcs in this phase.
 
 ```
 Beat 1 — Setup: the core tension (humiliation/block, OR need, mystery, longing, crisis, choice)
