@@ -18,6 +18,15 @@ Use this file for every batch of 2+ concepts. **Never one-shot a full batch in a
 
 ---
 
+## Version control (one PR per batch)
+
+- **Phases 0–3:** never commit, never open a PR. Just update plan/JSON, stop, wait for confirmation.
+- **Phase 4 only:** after the TXT export is assembled, commit everything and open **one** PR for the whole batch (new branch named for the batch, e.g. `batch-04`).
+- Do not push to `main`/`master`. One batch = one branch = one PR.
+- Override only if the user explicitly requests a mid-batch commit/PR.
+
+---
+
 ## File layout per batch
 
 ```
@@ -117,6 +126,8 @@ Workflow bắt buộc — mỗi phase = 1 session riêng:
 
 KHÔNG one-shot. KHÔNG HTML. Deliverable cuối: {BATCH_ID}-package.txt
 
+KHÔNG commit / KHÔNG tạo PR sau mỗi phase. Chỉ tạo 1 PR DUY NHẤT sau Phase 4.
+
 Bắt đầu Phase 0 ONLY. Dừng sau khi xong, chờ tôi confirm.
 ```
 
@@ -184,7 +195,7 @@ Dùng skill storywriting — Phase 2A ONLY.
 Đọc output/{BATCH_ID}/{BATCH_ID}.json (items có photoPrompt)
 
 Viết CAPTION cho {IDS} (nửa đầu).
-- 1000–1200 ký tự mỗi caption (đếm ký tự)
+- 1000–1200 ký tự mỗi caption (đếm ký tự) — nếu vượt quá thì GIỮ NGUYÊN, không trim
 - 3 đoạn + blank line + CTA (MORE / YES / NEXT)
 - Đoạn 2: 1 visual detail từ photo prompt
 - Không spoil twist
@@ -208,7 +219,7 @@ Dùng skill storywriting — Phase 3 ONLY.
 Đọc output/{BATCH_ID}/{BATCH_ID}.json
 
 Viết FULL STORY cho {ID_A} và {ID_B} ONLY.
-- 6000–8000 ký tự mỗi bài (đếm ký tự)
+- 6000–8000 ký tự mỗi bài (đếm ký tự) — nếu vượt quá thì GIỮ NGUYÊN, không trim
 - Mở đầu khớp caption — reader cảm continuity
 - 4 acts: Hook → Pressure → Turn → Payoff
 - Twist + consequence antagonist + final line cụ thể
@@ -239,6 +250,9 @@ Xuất output/{BATCH_ID}/{BATCH_ID}-package.txt theo format batch-mode.md.
 
 Optional: cũng xuất -photos.txt, -captions.txt, -stories.txt
 Hoặc chạy: node scripts/json-to-txt.js output/{BATCH_ID}/{BATCH_ID}.json
+
+Sau khi export xong: đây là điểm DUY NHẤT để commit + tạo PR.
+Commit toàn bộ batch (plan.md, JSON, các file TXT) trên 1 branch ({BATCH_ID}) và tạo 1 PR duy nhất.
 ```
 
 ---

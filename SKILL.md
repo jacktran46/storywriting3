@@ -36,6 +36,8 @@ Platform: **Nano Banana 2** (Google image generation)
 3. **JSON is source of truth** — `output/{batch-id}/{batch-id}.json`
 4. **Final deliverable = TXT** — never HTML unless user explicitly overrides
 5. **Phase prompts** — copy from `references/batch-mode.md`
+6. **One PR per batch** — never commit or open a PR after each phase. Commit/PR only **once**, after Phase 4 (TXT export) completes. See [Version control](#version-control).
+7. **Never trim over-limit content** — if a full story or caption exceeds its character limit, leave it as-is. Do not cut, summarize, or rewrite to fit.
 
 ---
 
@@ -47,12 +49,14 @@ Platform: **Nano Banana 2** (Google image generation)
 | `references/nano-banana-2.md` | Before any photo prompt |
 | `references/concepts1.md` | Category bank A–M (~130 templates) |
 | `references/concepts2.md` | 240 seeds in 12 groups |
+| `references/concepts3.md` | 600 seeds in 50 new setting groups |
 | `references/caption-methodology.md` | Before any caption |
 | `references/full-story-methodology.md` | Before any full story |
 
 **Concept source:**
 - "concepts1" / "category B" → `concepts1.md`
 - "concepts2" / "concept 03" → `concepts2.md`
+- "concepts3" / "group 07" → `concepts3.md`
 - Custom scenario → no bank required
 
 ---
@@ -142,6 +146,7 @@ CHARACTER LOCK — do not change across photo, caption, and full story:
 Read `references/caption-methodology.md` first.
 
 - **Length**: 1000–1200 characters (count characters)
+- **If over 1200 chars**: leave it as-is — do **not** trim, cut, or compress to fit. Length cap is a target, not a hard ceiling.
 - **Structure**: 3 paragraphs + blank line + CTA
 - **CTA**: Only `MORE`, `YES`, or `NEXT`
 - **No twist spoil** — payoff stays in full story
@@ -161,6 +166,7 @@ After writing, print verify table: `id | char count | opening style | CTA`
 Read `references/full-story-methodology.md` first.
 
 - **Length**: 6000–8000 characters (count characters)
+- **If over 8000 chars**: leave it as-is — do **not** trim, cut scenes, or summarize to fit. Length cap is a target, not a hard ceiling.
 - **Opening**: Match and extend caption — same scene, same hook
 - **Structure**: 4 acts — Hook → Pressure → Turn → Payoff
 - **Ending**: Full twist + antagonist consequence + concrete final line
@@ -213,6 +219,25 @@ node scripts/json-to-txt.js output/{batch-id}/{batch-id}.json
 
 ---
 
+## Version control
+
+**One PR per batch — never per phase.**
+
+- **Phases 0–3:** do **not** commit and do **not** open a PR. Each phase only updates the plan/JSON locally, then stops and waits for user confirmation.
+- **Phase 4 (after TXT export):** this is the **only** point where you commit and open a PR — a single PR containing the whole batch (plan.md, JSON, and all TXT files).
+- Never push directly to `main`/`master`. Always use a new branch named for the batch (e.g. `batch-04`).
+- If the user explicitly asks for a commit/PR mid-batch, follow that instruction — otherwise hold everything for the single end-of-batch PR.
+
+| Phase | Commit? | PR? |
+|-------|---------|-----|
+| 0 Plan | No | No |
+| 1 Photo | No | No |
+| 2 Caption | No | No |
+| 3 Story | No | No |
+| 4 Export TXT | **Yes — once** | **Yes — one PR for the batch** |
+
+---
+
 ## JSON schema (summary)
 
 ```json
@@ -256,13 +281,13 @@ Full schema + copy-paste prompts: `references/batch-mode.md`
 - [ ] Google content policy OK
 
 **Caption**
-- [ ] 1000–1200 chars each
+- [ ] 1000–1200 chars each (if over, keep as-is — do not trim)
 - [ ] Paragraph 2 has photo visual detail
 - [ ] No twist spoil; no consecutive same opening style
 - [ ] CTA = MORE / YES / NEXT only
 
 **Full story**
-- [ ] 6000–8000 chars each
+- [ ] 6000–8000 chars each (if over, keep as-is — do not trim)
 - [ ] Opening matches caption
 - [ ] Complete twist + consequence + final line
 - [ ] No Facebook CTA in body
