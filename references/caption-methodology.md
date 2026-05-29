@@ -18,7 +18,7 @@ Create curiosity, social tension, and a reason to click through to the **full st
 
 | Property | Value |
 |---|---|
-| Length | 1000–1200 characters (count **characters**, not words) |
+| Length | 1000–1200 characters (count **characters**, not words). If a caption runs over 1200, **keep it as-is — never trim or compress to fit**. |
 | Language | English |
 | Structure | 3 paragraphs + 1 blank line + CTA |
 | Dialogue | Only quote lines that appear **verbatim in the photo prompt or full story plan** — never invent for caption alone |
@@ -120,7 +120,7 @@ Type 'NEXT' if you want the next part!! 🔗
 
 ## Quality Checklist
 
-- [ ] 1000–1200 characters (count them)
+- [ ] 1000–1200 characters (count them) — if over, keep as-is, do not trim
 - [ ] Reads like story opening, not image description
 - [ ] Paragraph 2 has one visual detail from photo prompt
 - [ ] Paragraph 3 begins twist without completing it
