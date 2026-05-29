@@ -51,15 +51,15 @@ Every prompt must read like a **real person took this photo on a phone**, not a 
 
 ## Prompt Output Format
 
-One **4:5 hero photo prompt** per concept. The image captures the **scroll-stop moment** — conflict + emotional hook visible, **twist NOT shown**.
+One **4:5 hero photo prompt** per concept. The image captures the **scroll-stop moment** — the engine's core tension + emotional hook visible, **payoff NOT shown**. The tension may be conflict, a crisis, a tender act, a charged anticipation, or a hard choice (see `concepts4.md`).
 
 ### Title format
 
 ```
-NNN | [humiliation/conflict phrase] → [reveal/twist phrase]
+NNN | [tension phrase] → [payoff phrase]
 ```
 
-The title names the full arc for production reference. The **photo prompt itself must not depict the twist payoff**.
+The title names the full arc for production reference (e.g. humiliation → reveal, crisis → rescue, longing → reunion, kindness → reward). The **photo prompt itself must not depict the payoff**.
 
 ### Photo prompt structure
 
@@ -68,7 +68,7 @@ The title names the full arc for production reference. The **photo prompt itself
 
 [Specific US location + time of day + natural lighting]. [Character lock — age, hair, outfit for every person in frame].
 
-The photo captures [peak-tension moment before the twist]: [who is doing what to whom, body language, facial expression]. [One object or environmental detail that hints at more — ring box, worn shoes, security badge turned backward, folded letter — without revealing the twist outcome]. [Background context — who else is watching, what room/space].
+The photo captures [peak-tension moment before the payoff]: [who is doing what to whom, body language, facial expression]. [One object or environmental detail that hints at more — ring box, worn shoes, security badge turned backward, folded letter — without revealing the payoff/outcome]. [Background context — who else is watching, what room/space].
 
 Framing: [handheld angle — slightly low, eye-level, over-shoulder POV, etc.]. Shallow phone depth-of-field. Candid, like someone in the room quickly took this picture. No readable text on signs, documents, phone screens, or badges — blur or angle away from legible text. No subtitles. No watermark.
 ```
@@ -79,12 +79,35 @@ Framing: [handheld angle — slightly low, eye-level, over-shoulder POV, etc.]. 
 
 | Beat | Show in photo? | Notes |
 |------|----------------|-------|
-| Setup / humiliation | **Yes** | Antagonist blocking, mocking, or dismissing protagonist |
+| Core tension moment | **Yes** | The engine's hook: conflict/humiliation, a crisis, a tender act, an anticipation, or a charged choice |
 | Object clue | **Optional** | Ring, envelope, worn item — visible but meaning unclear |
-| Recognition beginning | **Rarely** | Only if it doesn't spoil twist |
-| Twist payoff | **Never** | Do not show reversal, reveal, or antagonist humiliated |
+| Recognition beginning | **Rarely** | Only if it doesn't spoil the payoff |
+| Payoff / outcome | **Never** | Do not show the reveal, reunion result, antagonist humiliated, or the reward |
 
 The photo pairs with a **caption that stops before the payoff** and a **full story article** that completes the arc.
+
+### Engine → photo-moment guide
+
+The "scroll-stop moment" differs by engine (see `concepts4.md`). Match the photo to the engine's tension:
+
+| Engine family | What the photo shows |
+|---|---|
+| Humiliation / Karma | the antagonist blocking, mocking, or dismissing — protagonist composed |
+| Kindness / Found Family / Stranger Stayed / Provider in Disguise | a quiet act of help or a moment of need — warmth and uncertainty, outcome unknown |
+| Reunion / Reconciliation | two people an instant before recognition — a held gaze, a faltering step |
+| Devotion / Last Wish / Bittersweet | a small faithful ritual or a tender threshold moment — meaning not yet clear |
+| Sacrifice / Forgiveness | the charged instant of the choice — before we know what they'll do |
+
+### Action-in-photo exception
+
+For four engines the **peak action *is* the photo** — capture it directly. The *outcome, reward, or recognition* still stays out of frame.
+
+- **Crisis Hero (E05)** — mid-rescue: the overlooked person already acting (CPR, carrying someone, blocking danger).
+- **The Honest Return (E07)** — the moment of handing the wallet/cash/valuables back.
+- **Good Deed Witnessed (E19)** — the unguarded kind act, caught candidly as if by accident.
+- **Underdog Wins on Merit (E22)** — the winning instant (crossing the line, the buzzer shot) — not the trophy/celebration.
+
+Keep these non-violent and policy-safe: show effort, care, and motion — never graphic harm.
 
 ---
 

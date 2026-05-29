@@ -8,7 +8,8 @@ description: >
 
   Use whenever the user mentions: storywriting, story-photo-full-v1, story photo full, photo story
   pipeline, batch mode, Nano Banana 2, 4:5 photo prompt, Facebook drama photo, self-taken photo
-  prompt, Facebook caption + full story, concepts1, concepts2, concept bank, category A–M drama,
+  prompt, Facebook caption + full story, concepts1, concepts2, concepts3, concepts4, concept bank,
+  narrative engine, category A–M drama,
   Rich vs Poor, Workplace, Wedding, Military, Lullaby drama photo posts.
 
   Default: phased batch workflow (never one-shot 6+ items). Output TXT package, never HTML.
@@ -50,6 +51,7 @@ Platform: **Nano Banana 2** (Google image generation)
 | `references/concepts1.md` | Category bank A–M (~130 templates) |
 | `references/concepts2.md` | 240 seeds in 12 groups |
 | `references/concepts3.md` | 600 seeds in 50 new setting groups |
+| `references/concepts4.md` | 930 seeds in 31 narrative engines (beyond humiliation→reveal) |
 | `references/caption-methodology.md` | Before any caption |
 | `references/full-story-methodology.md` | Before any full story |
 
@@ -57,7 +59,20 @@ Platform: **Nano Banana 2** (Google image generation)
 - "concepts1" / "category B" → `concepts1.md`
 - "concepts2" / "concept 03" → `concepts2.md`
 - "concepts3" / "group 07" → `concepts3.md`
+- "concepts4" / "engine 07" → `concepts4.md` (organized by narrative engine; mix with any setting)
 - Custom scenario → no bank required
+
+---
+
+## Narrative engines
+
+The pipeline's **default engine is *humiliation → reveal***. `concepts4.md` adds **31 engines** (kindness, crisis hero, reunion, debt of gratitude, sacrifice, forgiveness, bittersweet, etc.) so a batch isn't one-note.
+
+- **Pick an engine per item** in Phase 0 and record it (`engine` field). Rotate engines across a batch — avoid 2+ consecutive items on the same engine.
+- **Not every engine has an antagonist.** When there's none, the Turn is an action / recognition / choice / return, and the Payoff is the emotional resolution — **not** a forced comeuppance. The methodology files carry the engine-aware branches.
+- **Twist stays out of the photo** for all engines, with **one exception**: four **action-in-photo** engines may show the peak action itself (the *outcome* still stays hidden):
+  - Crisis Hero (E05), The Honest Return (E07), Good Deed Witnessed (E19), Underdog Wins on Merit (E22).
+- **Tone:** engines are tagged `feel-good`, `bittersweet`, or `mixed` — vary tone across a batch too.
 
 ---
 
@@ -82,18 +97,19 @@ Phase 4 — Export TXT        → package.txt from JSON (format only)
 Before any creative writing, plan every item:
 
 ```
-Beat 1 — Setup: humiliation or block
-Beat 2 — Clue: object, detail, or pressure
-Beat 3 — Turn: recognition begins
-Beat 4 — Payoff: full twist (caption + story only — NOT in photo)
+Beat 1 — Setup: the core tension (humiliation/block, OR need, mystery, longing, crisis, choice)
+Beat 2 — Clue/Build: object, detail, or rising pressure
+Beat 3 — Turn: the pivot (reveal / action / recognition / choice / return)
+Beat 4 — Payoff: engine-appropriate resolution (caption + story only — NOT in photo, except action-in-photo engines)
 ```
 
 Per item output in plan + JSON:
-- id | title (humiliation → reveal)
+- id | title (tension → payoff)
 - conceptSource
+- **engine** (from concepts4 if used; default "humiliation → reveal") — rotate across batch
 - 4-beat arc (1–2 sentences each)
 - Character Lock (all persons, setting US, object clue)
-- Peak-tension moment for photo (Beat 1–2)
+- Peak-tension moment for photo (Beat 1–2; for action-in-photo engines, the peak action)
 - openingStyle (rotate across batch — no consecutive duplicates)
 
 ---
@@ -108,7 +124,7 @@ Read `references/nano-banana-2.md` first.
 | Style | Self-taken phone photo — candid, natural light, subtle grain |
 | Setting | United States — specific location + lighting |
 | Language | English |
-| Content | Peak-tension Beat 1–2 — **twist NOT shown** |
+| Content | Peak-tension Beat 1–2 — **payoff NOT shown** (action-in-photo engines may show the peak action) |
 | Policy | Google Generative AI — fictional characters only |
 
 ### Prompt structure
@@ -118,7 +134,7 @@ Read `references/nano-banana-2.md` first.
 
 [US location + time + lighting]. [Character lock — age, hair, outfit for every person].
 
-The photo captures [peak-tension moment]: [antagonist action + protagonist reaction]. [Object clue]. [Background context].
+The photo captures [peak-tension moment]: [who is doing what + reactions — antagonist/protagonist for conflict engines, or the act of help / the charged moment for other engines]. [Object clue]. [Background context].
 
 Framing: [handheld angle]. Shallow phone depth-of-field. Candid snapshot. No readable text on signs, documents, screens, or badges. No watermark.
 ```
@@ -127,8 +143,9 @@ Framing: [handheld angle]. Shallow phone depth-of-field. Candid snapshot. No rea
 
 - Character lock in prompt body for every person
 - Self-taken cues required — never cinematic/studio
-- Twist withheld — no reversal or antagonist humiliated in frame
-- Title format: `NNN | [humiliation] → [reveal]`
+- Payoff withheld — no reveal, reunion result, or antagonist humiliated in frame
+- **Action-in-photo exception** (Crisis Hero, Honest Return, Good Deed Witnessed, Underdog Wins): the peak *action* may be shown; the *outcome/recognition* still stays hidden
+- Title format: `NNN | [tension] → [payoff]`
 
 ### Character Lock block (JSON `characterBible`)
 
@@ -155,7 +172,8 @@ Read `references/caption-methodology.md` first.
 
 Opening styles:
 `Dialogue slap` · `Silent witness` · `Object clue` · `Accuser POV` · `Victim restraint` ·
-`Room goes wrong` · `Visual reveal` · `Deadline pressure` · `Wrong apology` · `Moral choice`
+`Room goes wrong` · `Visual reveal` · `Deadline pressure` · `Wrong apology` · `Moral choice` ·
+`Tender moment` · `Crisis clock` · `The return` · `Quiet devotion` (engine-flexible — see caption-methodology.md)
 
 After writing, print verify table: `id | char count | opening style | CTA`
 
@@ -169,7 +187,7 @@ Read `references/full-story-methodology.md` first.
 - **If over 8000 chars**: leave it as-is — do **not** trim, cut scenes, or summarize to fit. Length cap is a target, not a hard ceiling.
 - **Opening**: Match and extend caption — same scene, same hook
 - **Structure**: 4 acts — Hook → Pressure → Turn → Payoff
-- **Ending**: Full twist + antagonist consequence + concrete final line
+- **Ending**: Turn paid off + engine-appropriate resolution (antagonist consequence only if there's an antagonist; else reunion/reward/vindication/grace/poignancy) + concrete final line
 - **Voice**: Human storytelling — not summary-style or robotic
 - **No CTA** in story body
 
@@ -247,8 +265,9 @@ node scripts/json-to-txt.js output/{batch-id}/{batch-id}.json
   "conceptSource": "concepts2 / Concept 03",
   "items": [{
     "id": "C041",
-    "title": "Humiliation → Reveal",
+    "title": "Tension → Payoff",
     "conceptSource": "Concept 03 #7",
+    "engine": "humiliation → reveal",
     "openingStyle": "Silent witness",
     "characterBible": "...",
     "photoPrompt": "...",
@@ -276,7 +295,7 @@ Full schema + copy-paste prompts: `references/batch-mode.md`
 **Photo prompt**
 - [ ] 4:5 vertical + smartphone aesthetic
 - [ ] Character lock consistent; Beat 1–2 shown
-- [ ] Twist NOT depicted
+- [ ] Payoff NOT depicted (action-in-photo engines: action OK, outcome hidden)
 - [ ] No readable in-scene text
 - [ ] Google content policy OK
 
@@ -289,7 +308,7 @@ Full schema + copy-paste prompts: `references/batch-mode.md`
 **Full story**
 - [ ] 6000–8000 chars each (if over, keep as-is — do not trim)
 - [ ] Opening matches caption
-- [ ] Complete twist + consequence + final line
+- [ ] Turn paid off + engine-appropriate resolution (consequence only if antagonist exists)
 - [ ] No Facebook CTA in body
 
 **JSON + TXT**

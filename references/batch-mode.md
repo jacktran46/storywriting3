@@ -51,8 +51,9 @@ output/{batch-id}/
   "items": [
     {
       "id": "C041",
-      "title": "Humiliation phrase → Reveal phrase",
+      "title": "Tension phrase → Payoff phrase",
       "conceptSource": "Concept 03 #7",
+      "engine": "humiliation → reveal",
       "openingStyle": "Silent witness",
       "characterBible": "CHARACTER LOCK — do not change...",
       "photoPrompt": null,
@@ -106,7 +107,7 @@ Split files use `---` between items (same as old "Copy All" blocks).
 
 ## Copy-paste prompts (replace placeholders)
 
-Placeholders: `{BATCH_ID}`, `{IDS}`, `{ID_A}`, `{ID_B}`, `{CONCEPT_SOURCE}`, `{COUNT}`
+Placeholders: `{BATCH_ID}`, `{IDS}`, `{ID_A}`, `{ID_B}`, `{CONCEPT_SOURCE}`, `{COUNT}`, `{ENGINE}`
 
 ### Master — start a new batch
 
@@ -116,6 +117,7 @@ Dùng skill storywriting — BATCH MODE.
 Batch: {BATCH_ID}
 Items: {COUNT} ({IDS})
 Concept source: {CONCEPT_SOURCE}
+Engine: {ENGINE} (1 engine, hoặc luân phiên nhiều engine từ concepts4 — tránh trùng liên tiếp)
 
 Workflow bắt buộc — mỗi phase = 1 session riêng:
   Phase 0 → plan.md + JSON skeleton
@@ -140,23 +142,24 @@ Dùng skill storywriting — Phase 0 ONLY.
 
 Batch: {BATCH_ID} | Items: {IDS} | Source: {CONCEPT_SOURCE}
 
-Đọc concept bank tương ứng (concepts1 hoặc concepts2).
+Đọc concept bank tương ứng (concepts1 / concepts2 / concepts3 setting, hoặc concepts4 engine).
 
 Tạo STORY PLAN — KHÔNG viết photo prompt, caption, full story, txt.
 
 Mỗi item gồm:
-- id | title (humiliation → reveal)
+- id | title (tension → payoff)
 - conceptSource
-- 4-beat arc (Setup / Clue / Turn / Payoff) — 1–2 câu/beat
-- Character Lock đầy đủ (protagonist, antagonist, setting US, object clue)
-- Peak-tension moment cho photo (Beat 1–2, không spoil twist)
-- openingStyle (1 trong 10 styles, không trùng liên tiếp)
+- engine (chọn từ concepts4 nếu dùng; mặc định "humiliation → reveal") — luân phiên, không trùng liên tiếp
+- 4-beat arc (Setup / Clue / Turn / Payoff) — 1–2 câu/beat. Nếu engine không có antagonist: Turn = action/recognition/choice/return, Payoff = giải quyết cảm xúc (KHÔNG ép comeuppance)
+- Character Lock đầy đủ (các nhân vật, setting US, object clue nếu có)
+- Peak-tension moment cho photo (Beat 1–2, không spoil payoff; engine action-in-photo: E05/E07/E19/E22 được show hành động đỉnh điểm)
+- openingStyle (1 trong 14 styles, không trùng liên tiếp)
 
 Output:
 1. output/{BATCH_ID}/{BATCH_ID}-plan.md
-2. output/{BATCH_ID}/{BATCH_ID}.json — skeleton với characterBible + status.plan=true
+2. output/{BATCH_ID}/{BATCH_ID}.json — skeleton với characterBible + engine + status.plan=true
 
-Rotate location, twist type, opening style across items.
+Rotate engine, tone (feel-good/bittersweet), location, opening style across items.
 DỪNG sau Phase 0. Không làm Phase 1.
 ```
 

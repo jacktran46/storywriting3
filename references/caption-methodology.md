@@ -8,7 +8,9 @@ Full guide for writing Facebook captions that accompany **4:5 drama photo prompt
 
 Write the caption as the **beginning of a dramatic story**, not a summary of the image.
 The reader should feel like they're reading the first paragraph of a real emotional Facebook post.
-Create curiosity, social tension, and a reason to click through to the **full story article** — then stop before the payoff.
+Create curiosity and a reason to click through to the **full story article** — then stop before the payoff.
+
+**The hook is engine-dependent.** The default engine is *humiliation → reveal*, but `concepts4.md` defines 31 engines whose core tension may be **conflict, mystery, need, longing, a hard choice, or a ticking clock** — not always unfairness. Match the caption's tension to the engine; don't force a "someone was wronged" frame onto a kindness, reunion, or crisis-hero story.
 
 **Workflow:** Post photo + caption on Facebook → user comments article link → reader lands on website for full story.
 
@@ -71,18 +73,36 @@ Best for: defensive position that inverts.
 Open with unexpected selfless choice before stakes are clear.
 Best for: small kindness triggering the twist.
 
+### 11. Tender Moment Opener
+Open inside a quiet, charged moment of warmth, care, or need — someone helping, waiting, or staying.
+Best for: *Kindness Rewarded, Found Family, The Stranger Who Stayed, The Provider in Disguise* (concepts4 E01, E17, E18, E31).
+
+### 12. Crisis Clock Opener
+Open mid-emergency with the stakes ticking — before the overlooked person acts.
+Best for: *Crisis Hero* and other action engines (concepts4 E05, E22). May reference the action shown in the photo.
+
+### 13. The Return Opener
+Open with a stranger's quiet line — "You don't remember me, but…" — before the connection lands.
+Best for: *Debt of Gratitude, Long-Lost Reunion, Reunion of Rivals* (concepts4 E03, E08, E29).
+
+### 14. Quiet Devotion Opener
+Open on a small, faithful ritual whose meaning isn't yet clear — a saved seat, an unsent letter, a porch light left on.
+Best for: *Slow-Burn Devotion, The Last Wish, Bittersweet/Too Late* (concepts4 E09, E21, E11).
+
+> **Engine fit:** Styles 1–9 lean toward conflict/humiliation engines. Styles 10–14 cover warmth, crisis, reunion, and devotion engines. Still rotate — no two consecutive captions share a style.
+
 ---
 
 ## Paragraph Structure
 
 ### Paragraph 1 — Emotional Hook
-Establish social conflict in the first two sentences. Get to the unfairness fast.
+Establish the **core tension** in the first two sentences — get to it fast. The tension depends on the engine: unfairness (humiliation), a mystery or clue (reunion/recognition), a need or crisis (kindness/crisis hero), a longing (devotion), or a hard choice (sacrifice).
 
 ### Paragraph 2 — Build the Pressure
-Deepen humiliation or tension. Include **one specific visual detail** from the photo prompt (worn shirt, oil on hands, cracked sole, badge clipped backward).
+Deepen the **stakes** — humiliation, suspense, need, or anticipation, whichever the engine runs on. Include **one specific visual detail** from the photo prompt (worn shirt, oil on hands, cracked sole, badge clipped backward).
 
 ### Paragraph 3 — Begin the Twist
-Let something shift — stop before full payoff. Use action, reaction, object clue, or one exact dialogue line. End one step from knowing.
+Let something shift — stop before full payoff. Use action, reaction, object clue, or one exact dialogue line. End one step from knowing. (For action engines, the photo may already show the deed — the caption still withholds the *outcome*.)
 
 ### Blank Line + CTA
 One blank line before CTA. CTA must contain exactly one of: `'MORE'`, `'YES'`, `'NEXT'`
@@ -103,8 +123,8 @@ Type 'NEXT' if you want the next part!! 🔗
 
 | Element | Caption | Photo prompt | Full story |
 |---------|---------|--------------|------------|
-| Opening beat | Hooks with conflict | Shows peak-tension moment | Opens matching caption energy, then expands |
-| Twist payoff | Hidden | Not shown | Fully revealed with satisfying ending |
+| Opening beat | Hooks with the core tension | Shows peak-tension moment | Opens matching caption energy, then expands |
+| Twist / payoff | Hidden | Not shown (except the *action* in action-in-photo engines — outcome still hidden) | Fully revealed with satisfying ending |
 | Dialogue | Max 1 quoted line if in prompt | Optional in scene description | Full dialogue allowed |
 | Visual detail | One from photo prompt | Primary source | Enriched, not contradicted |
 
