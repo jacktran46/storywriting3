@@ -21,7 +21,7 @@ It must **feel like the same story** the caption promised — same characters, s
 | Language | English |
 | Format | Continuous prose — short paragraphs (2–4 sentences each) |
 | Opening | Must **match and extend** the Facebook caption — same hook energy, same situation; reader should feel "yes, this is what I came for" |
-| Ending | Complete resolution — twist revealed, antagonist consequence shown, emotional payoff delivered |
+| Ending | Complete resolution — the Turn pays off and the emotional payoff lands. For humiliation engines that means twist revealed + antagonist consequence; for other engines it means reunion, reward, vindication-by-result, grace, or poignancy (see Engine Adaptation below) |
 | Dialogue | Natural American speech; expand beyond caption quotes |
 
 ---
@@ -36,29 +36,51 @@ It must **feel like the same story** the caption promised — same characters, s
 - End act on rising tension
 
 ### Act 2 — Pressure (≈1600–2000 characters)
-- Deepen humiliation, stakes, or misunderstanding
-- Show antagonist's confidence and bystander reactions
-- Introduce or sharpen the **object clue** (ring, letter, recorder, worn item)
-- Protagonist's restraint or quiet dignity — make reader side with them
+- Deepen the **stakes** — humiliation, suspense, need, longing, or a tightening dilemma (whichever the engine runs on)
+- Show the forces in play — an antagonist's confidence and bystander reactions *if there is an antagonist*; otherwise the mounting need, mystery, or emotional weight
+- Introduce or sharpen the **object clue** (ring, letter, recorder, worn item) where the engine uses one
+- Protagonist's restraint, quiet dignity, or quiet goodness — make the reader side with them
 - Use the extra runway for a small secondary scene or witness POV beat that raises the cost
 
 ### Act 3 — Turn (≈1600–2000 characters)
-- Recognition begins — witness reacts, clue connects, hidden identity surfaces
-- Antagonist's certainty cracks
-- One sharp dialogue exchange or physical beat (door opens, phone buzzes, name spoken)
-- Hold the reveal slightly — let the room register before the words land
-- Build to reversal — do not rush the truth into the open
+- The pivot lands — depending on engine: a hidden identity surfaces, a clue connects, **an action is taken, a recognition dawns, a choice is made, a stranger returns, or the truth is confessed**
+- The status quo cracks — the antagonist's certainty, or the characters' assumptions, give way
+- One sharp dialogue exchange or physical beat (door opens, phone buzzes, name spoken, hand extended)
+- Hold the moment slightly — let the room register before it fully lands
+- Build to the turn — do not rush the truth into the open
 
 ### Act 4 — Payoff (≈1600–2400 characters)
-- Full twist landed clearly — reader understands who protagonist really is / what object meant
-- Antagonist consequence: humiliation, silence, apology forced, escorted out, etc.
-- Emotional closure for protagonist — dignity restored, connection found, justice served
+- The turn pays off clearly — the reader understands what was hidden / what the moment meant
+- **Engine-appropriate resolution:**
+  - Humiliation / Karma → antagonist consequence (silence, forced apology, escorted out)
+  - Kindness / Found Family / Stranger → warmth, the kindness returned, belonging
+  - Reunion / Reconciliation → the embrace, the wall down, the truth shared
+  - Crisis Hero / Quiet Competence / Underdog → vindication by result, undeniable
+  - Sacrifice / Forgiveness → moral elevation; reward optional, never required
+  - Bittersweet / Last Wish / Protector Who Stayed Away → poignancy; love acknowledged with a cost
+- Emotional closure for the protagonist — dignity restored, connection found, justice served, or peace reached
 - Short epilogue beat (days/weeks later) showing the world has changed
 - Final line: specific image or quiet line — **not** a moral lecture or "and they all learned..."
 
 ---
 
-## Voice & Style Rules
+## Engine Adaptation (non-humiliation stories)
+
+The 4-act spine works for every engine, but the **default *humiliation → reveal* assumes an antagonist, a reveal, and a comeuppance**. Most engines in `concepts4.md` do not. Adapt, don't force.
+
+> **Not every story has an antagonist.** When there is none, the Turn is a recognition / action / choice / return, and the Payoff is the emotional resolution — **not** a villain's downfall. Do not invent a "bad guy" just to fill the slot.
+
+| Engine family | Tension (Acts 1–2) | Turn (Act 3) | Payoff (Act 4) |
+|---|---|---|---|
+| Humiliation / Karma | unfairness, mockery | hidden identity / behavior backfires | antagonist consequence |
+| Crisis Hero / Quiet Competence / Underdog | danger, doubt, a ticking clock | the overlooked one acts / is proven right | vindication by result |
+| Kindness / Found Family / Stranger Stayed / Provider in Disguise | need, loneliness, a quiet act | the kindness loops back / community gathers | warmth, belonging, reward |
+| Reunion / Reconciliation / Misunderstanding | mystery, longing, an old rift | a clue connects / the truth is explained | embrace, the wall down |
+| Debt of Gratitude / Torch Passing | a stranger's quiet claim | "you changed my life" / the torch passes | tribute, continuity |
+| Sacrifice / Forgiveness / Honest Return | a hard choice, a temptation | the right thing is chosen | moral elevation (reward optional) |
+| Bittersweet / Last Wish / Protector Who Stayed Away | a closing window, a misread absence | the truth lands at the threshold | poignancy; love with a cost |
+
+**Action-in-photo engines** (Crisis Hero, Honest Return, Good Deed Witnessed, Underdog Wins): the photo may depict the peak *action*, so Act 1 should pick up *at or just after* that moment and carry the **consequence/recognition** the photo withholds.
 
 ### Do
 - Write in **close third person** or **first person from witness POV** — pick one per story, stay consistent
@@ -98,9 +120,9 @@ The first 2–3 sentences of the full story must feel like the **next paragraph*
 
 Every full story must end with:
 
-1. **Twist fully explained** — reader is not left guessing
-2. **Antagonist arc closed** — they don't vanish off-page
-3. **Protagonist emotional beat** — relief, quiet victory, reunion, or dignity
+1. **The turn fully paid off** — reader is not left guessing (twist explained, action's outcome shown, recognition completed, or choice resolved)
+2. **Every arc closed** — no key character vanishes off-page. *If there's an antagonist*, close their arc; if not, close the relationship or emotional thread instead
+3. **Protagonist emotional beat** — relief, quiet victory, reunion, dignity, peace, or poignancy
 4. **Final image or line** — one concrete moment, under 25 words, that lingers
 
 Good final lines:
@@ -134,7 +156,7 @@ No outfit changes mid-story unless narrated. No new major characters after Act 2
 - [ ] 6000–8000 characters (count them) — if over, keep as-is, do not trim
 - [ ] Opening matches caption hook — reader continuity
 - [ ] All 4 acts present with clear turn and payoff
-- [ ] Twist fully revealed; antagonist consequence shown
+- [ ] Turn paid off + engine-appropriate resolution (antagonist consequence only if there is an antagonist)
 - [ ] Voice is human, specific, not robotic
 - [ ] No caption CTA text copied into story body
 - [ ] Final line is concrete, not moralizing
@@ -148,6 +170,7 @@ No outfit changes mid-story unless narrated. No new major characters after Act 2
 
 - **Padding with backstory** unrelated to the twist
 - **Deus ex machina** — reveal must connect to clues in Acts 1–2
-- **Multiple twist layers** — one clean reversal per story
+- **Multiple twist layers** — one clean turn per story (reveal, action, recognition, or choice)
+- **Forcing an antagonist** — don't invent a villain or comeuppance for engines that don't have one
 - **News-report tone** — "According to witnesses..."
 - **Caption spoiler in title** — article title can tease, not reveal
