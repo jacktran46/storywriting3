@@ -27,6 +27,39 @@ Use this file for every batch of 2+ concepts. **Never one-shot a full batch in a
 
 ---
 
+## Mixed-bank batch (controlled-random)
+
+Use when a batch should **draw from multiple banks** — typically a **setting** from concepts1/2/3 paired with an **engine** from `story-engines.md` (E00–E31). This keeps variety high without the batch turning into chaos.
+
+**Model:** each item = `setting (concepts1/2/3) × engine (story-engines)`. **E00 = Humiliation → Reveal** is the default engine that concepts1/2/3 already run on — use it when you want a classic seed as-is; pick E01–E31 to reshape the Turn/Payoff (see `full-story-methodology.md` → Engine Adaptation).
+
+### Controlled-random rules (enforced)
+
+1. **≤ max distinct engines** — cap the number of different engines in one batch (default `round(N×0.7)`, clamped 3–8). Prevents "10 totally different modes" whiplash.
+2. **No consecutive duplicate engine** — two adjacent items must not share an engine.
+3. **Balanced tone** — mix `feel-good` / `bittersweet` / `mixed` (rough target ~40% / ~20% / ~40%). Never an all-one-tone batch.
+4. **Distinct settings** — no repeated setting group when `N ≤ 50`.
+5. **Rotate opening styles** — consecutive captions use different styles (match style to engine — see caption-methodology.md).
+6. **Photo rule per item** — default `twist-hidden`; tag `action-in-photo` for E05/E07/E19/E22 so Phase 1 knows the peak action may be shown (outcome still hidden).
+
+### Generate with the picker
+
+Run the helper to apply all rules and print an engine-map + JSON skeleton (with `engine` field):
+
+```bash
+node scripts/pick-batch.js --count 10 --prefix M --batch batch-08 --seed 42 --write
+```
+
+- `--seed` makes the draw reproducible (omit for a fresh random draw; the seed used is printed).
+- `--write` saves `output/<batch>/<batch>.json` (skeleton with `engine`, `tone`, `photoRule`, `openingStyle`, `conceptSource`, `seedRefs`; `status.*` all false).
+- Without `--write` it prints the skeleton to stdout.
+
+### Phase 0 requirement (mandatory)
+
+For any mixed-bank batch, **Phase 0 MUST print the engine-map table first** (before writing arcs), so the engine/tone/setting mix is visible and approved. Use the picker's output, or reproduce the table by hand. Then fill each item's `title` + 4-beat arc + `characterBible`, keeping the planned `engine` / `tone` / `photoRule` / `openingStyle`.
+
+---
+
 ## File layout per batch
 
 ```
@@ -143,6 +176,8 @@ Dùng skill storywriting — Phase 0 ONLY.
 Batch: {BATCH_ID} | Items: {IDS} | Source: {CONCEPT_SOURCE}
 
 Đọc concept bank tương ứng (concepts1 / concepts2 / concepts3 setting, hoặc concepts4 engine).
+
+Nếu MIXED-BANK: chạy `node scripts/pick-batch.js` (hoặc đọc engine-map đã có) và IN BẢNG ENGINE-MAP trước khi viết arc. Xem batch-mode.md → Mixed-bank batch.
 
 Tạo STORY PLAN — KHÔNG viết photo prompt, caption, full story, txt.
 
